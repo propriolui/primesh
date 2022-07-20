@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:primesh/config/config.dart';
 
 class ChatListElement extends StatefulWidget {
-  const ChatListElement({Key? key}) : super(key: key);
+  final Function callback;
+
+  const ChatListElement({Key? key, required this.callback}) : super(key: key);
 
   @override
   State<ChatListElement> createState() => _ChatListElementState();
@@ -18,7 +20,9 @@ class _ChatListElementState extends State<ChatListElement> {
             border:
                 Border(bottom: BorderSide(width: 1, color: Colors.black45))),
         child: TextButton(
-          onPressed: () => {},
+          onPressed: () {
+            widget.callback();
+          },
           style: ButtonStyle(overlayColor:
               MaterialStateProperty.resolveWith<Color?>(
                   (Set<MaterialState> states) {
@@ -45,8 +49,8 @@ class _ChatListElementState extends State<ChatListElement> {
                         vertical: 0.0, horizontal: 7.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Spacer(
+                      children: [
+                        const Spacer(
                           flex: 2,
                         ),
                         Expanded(
@@ -59,7 +63,7 @@ class _ChatListElementState extends State<ChatListElement> {
                                   color: Colors.black54,
                                   fontSize: chatListElementFontSize),
                             )),
-                        Expanded(
+                        const Expanded(
                           flex: 3,
                           child: Text(
                             "cipolleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -67,7 +71,7 @@ class _ChatListElementState extends State<ChatListElement> {
                             style: TextStyle(color: Colors.black54),
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         )
                       ],

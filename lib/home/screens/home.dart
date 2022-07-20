@@ -36,6 +36,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Primesh'),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(20.0),
+                bottomLeft: Radius.circular(20.0))),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

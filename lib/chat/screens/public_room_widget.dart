@@ -17,10 +17,11 @@ class _PublicRoomState extends State<PublicRoom> {
 
   void _addNewMessage(String text) {
     Message prova = Message(
-        nodeID: "Roberto", text: text, datetime: "10/10", type: 0, received: 0);
+        nodeID: "Roberto", text: text, datetime: "10:10", type: 0, received: 0);
     DbHelper.instance.addMessage(prova);
-    message.insert(0, prova);
-    setState(() {});
+    setState(() {
+      message.insert(0, prova);
+    });
   }
 
   @override
@@ -43,8 +44,7 @@ class _PublicRoomState extends State<PublicRoom> {
                         reverse: true,
                         children: message.map<ChatBoxMulti>((message) {
                           return ChatBoxMulti(message: message);
-                        }).toList(),
-                      );
+                        }).toList());
               }),
         ),
         SizedBox(

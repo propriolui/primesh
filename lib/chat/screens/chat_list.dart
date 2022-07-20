@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primesh/chat/models/list_element_content.dart';
+import 'package:primesh/chat/screens/private_room_widget.dart';
 import 'package:primesh/chat/widgets/chat_list_element.dart';
 
 class ChatList extends StatefulWidget {
@@ -10,12 +11,23 @@ class ChatList extends StatefulWidget {
 }
 
 class _ChatListState extends State<ChatList> {
+  void _goToRoom() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => const PrivateRoom(isMulti: false)));
+  }
+
   ListElementContent lec =
       ListElementContent(name: "Fabrizio", lastMessage: "uocaca");
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [ChatListElement(), ChatListElement(), ChatListElement()],
+      children: [
+        ChatListElement(callback: _goToRoom),
+        ChatListElement(callback: _goToRoom),
+        ChatListElement(callback: _goToRoom)
+      ],
     );
   }
 }

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-const secondaryColor = Colors.tealAccent;
-const messageSendedColor = Colors.indigo;
+Color secondaryColor = Colors.tealAccent;
+Color messageSendedColor = Colors.indigo;
 Color messageReceivedColor = Colors.orange.shade400;
-const messageBoxPadding = 20.0;
-const messageFontSize = 15.0;
-const messageNameFontSize = 13.0;
-const messageDateTimeFontSize = 11.0;
-const messageFieldPadding = 16.0;
-const messageSendButtonPadding = 19.0;
-const chatListElementFontSize = 17.0;
-const globalRadius = 10.0;
+double messageBoxPadding = 20.0;
+double messageFontSize = 15.0;
+double messageNameFontSize = 13.0;
+double messageDateTimeFontSize = 11.0;
+double messageFieldPadding = 16.0;
+double messageSendButtonPadding = 19.0;
+double chatListElementFontSize = 17.0;
+double globalRadius = 10.0;
 enum chat_message { received, sended }
+bool sendWithEnter = true;

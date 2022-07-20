@@ -30,8 +30,8 @@ class ChatBoxMulti extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style: const TextStyle(
-                    fontSize: messageFontSize, color: Colors.white),
+                style:
+                    TextStyle(fontSize: messageFontSize, color: Colors.white),
               ),
             ),
             Positioned(
@@ -39,7 +39,7 @@ class ChatBoxMulti extends StatelessWidget {
                 top: 3,
                 child: Text(
                   message.nodeID,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: messageNameFontSize, color: Colors.white),
                 )),
             Positioned(
@@ -47,7 +47,7 @@ class ChatBoxMulti extends StatelessWidget {
                 bottom: 5,
                 child: Text(
                   message.datetime,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: messageDateTimeFontSize, color: Colors.white),
                 ))
           ],
@@ -71,8 +71,8 @@ class ChatBoxMulti extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style: const TextStyle(
-                    fontSize: messageFontSize, color: Colors.white),
+                style:
+                    TextStyle(fontSize: messageFontSize, color: Colors.white),
               ),
             ),
             Positioned(
@@ -80,7 +80,7 @@ class ChatBoxMulti extends StatelessWidget {
                 bottom: 5,
                 child: Text(
                   message.datetime,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: messageDateTimeFontSize, color: Colors.white),
                 ))
           ],

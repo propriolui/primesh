@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primesh/chat/models/message.dart';
+import 'package:primesh/db/models/message.dart';
 import 'package:primesh/config/config.dart';
 
 class ChatBoxSingle extends StatelessWidget {
@@ -10,13 +10,13 @@ class ChatBoxSingle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (message.type == chat_message.received) {
+    if (message.type == 0) {
       return Row(mainAxisAlignment: MainAxisAlignment.start, children: [
         Stack(
           children: [
             Container(
               constraints: BoxConstraints(
-                  minWidth: ((message.dateTime.length + 0.0) * 8),
+                  minWidth: ((message.datetime.length + 0.0) * 8),
                   maxWidth: MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(globalRadius),
@@ -28,16 +28,16 @@ class ChatBoxSingle extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style: const TextStyle(
-                    fontSize: messageFontSize, color: Colors.white),
+                style:
+                    TextStyle(fontSize: messageFontSize, color: Colors.white),
               ),
             ),
             Positioned(
                 right: 20,
                 bottom: 5,
                 child: Text(
-                  message.dateTime,
-                  style: const TextStyle(
+                  message.datetime,
+                  style: TextStyle(
                       fontSize: messageDateTimeFontSize, color: Colors.white),
                 ))
           ],
@@ -49,7 +49,7 @@ class ChatBoxSingle extends StatelessWidget {
           children: [
             Container(
               constraints: BoxConstraints(
-                  minWidth: ((message.dateTime.length + 0.0) * 8),
+                  minWidth: ((message.datetime.length + 0.0) * 8),
                   maxWidth: MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(globalRadius),
@@ -61,16 +61,16 @@ class ChatBoxSingle extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.rtl,
                 overflow: TextOverflow.clip,
-                style: const TextStyle(
-                    fontSize: messageFontSize, color: Colors.white),
+                style:
+                    TextStyle(fontSize: messageFontSize, color: Colors.white),
               ),
             ),
             Positioned(
                 right: 20,
                 bottom: 5,
                 child: Text(
-                  message.dateTime,
-                  style: const TextStyle(
+                  message.datetime,
+                  style: TextStyle(
                       fontSize: messageDateTimeFontSize, color: Colors.white),
                 ))
           ],
