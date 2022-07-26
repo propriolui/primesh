@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:primesh/config/config.dart';
 import 'package:window_size/window_size.dart';
 import 'home/screens/home.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Primesh',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: primaryColor,
         androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
         applyElevationOverlayColor: true,
         primaryColorDark: Colors.black54,

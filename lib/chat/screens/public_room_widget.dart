@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:primesh/chat/widgets/chat_box_multi.dart';
 import 'package:primesh/chat/widgets/chat_message_field.dart';
+import 'package:primesh/config/config.dart';
 import 'package:primesh/db/db_helper.dart';
 import 'package:primesh/db/models/message.dart';
 
@@ -27,32 +28,39 @@ class _PublicRoomState extends State<PublicRoom> {
   @override
   Widget build(BuildContext context) {
     messages.then((data) => {message = data});
-    return Column(
-      children: <Widget>[
-        Expanded(
-          flex: 6,
-          child: FutureBuilder(
-              future: messages,
-              builder: (BuildContext context,
-                  AsyncSnapshot<List<Message>> snapshot) {
-                if (!snapshot.hasData) {
-                  return const Center(child: Text('Loading...'));
-                }
-                return snapshot.data!.isEmpty
-                    ? const Center(child: Text('No messages.'))
-                    : ListView(
-                        reverse: true,
-                        children: message.map<ChatBoxMulti>((message) {
-                          return ChatBoxMulti(message: message);
-                        }).toList());
-              }),
-        ),
-        SizedBox(
-            height: 90,
-            child: ChatMessageField(
-              callback: _addNewMessage,
-            ))
-      ],
+    return Container(
+      decoration: BoxDecoration(
+          color: contrast,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(containersCorner),
+              topRight: Radius.circular(containersCorner))),
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 6,
+            child: FutureBuilder(
+                future: messages,
+                builder: (BuildContext context,
+                    AsyncSnapshot<List<Message>> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const Center(child: Text('Loading...'));
+                  }
+                  return snapshot.data!.isEmpty
+                      ? const Center(child: Text('No messages.'))
+                      : ListView(
+                          reverse: true,
+                          children: message.map<ChatBoxMulti>((message) {
+                            return ChatBoxMulti(message: message);
+                          }).toList());
+                }),
+          ),
+          SizedBox(
+              height: 90,
+              child: ChatMessageField(
+                callback: _addNewMessage,
+              ))
+        ],
+      ),
     );
   }
 }

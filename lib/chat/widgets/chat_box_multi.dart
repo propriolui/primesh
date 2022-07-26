@@ -30,8 +30,7 @@ class ChatBoxMulti extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style:
-                    TextStyle(fontSize: messageFontSize, color: Colors.white),
+                style: TextStyle(fontSize: messageFontSize, color: contrast),
               ),
             ),
             Positioned(
@@ -39,8 +38,8 @@ class ChatBoxMulti extends StatelessWidget {
                 top: 3,
                 child: Text(
                   message.nodeID,
-                  style: TextStyle(
-                      fontSize: messageNameFontSize, color: Colors.white),
+                  style:
+                      TextStyle(fontSize: messageNameFontSize, color: contrast),
                 )),
             Positioned(
                 right: 20,
@@ -48,7 +47,7 @@ class ChatBoxMulti extends StatelessWidget {
                 child: Text(
                   message.datetime,
                   style: TextStyle(
-                      fontSize: messageDateTimeFontSize, color: Colors.white),
+                      fontSize: messageDateTimeFontSize, color: contrast),
                 ))
           ],
         )
@@ -71,8 +70,7 @@ class ChatBoxMulti extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style:
-                    TextStyle(fontSize: messageFontSize, color: Colors.white),
+                style: TextStyle(fontSize: messageFontSize, color: contrast),
               ),
             ),
             Positioned(
@@ -81,7 +79,7 @@ class ChatBoxMulti extends StatelessWidget {
                 child: Text(
                   message.datetime,
                   style: TextStyle(
-                      fontSize: messageDateTimeFontSize, color: Colors.white),
+                      fontSize: messageDateTimeFontSize, color: contrast),
                 ))
           ],
         )

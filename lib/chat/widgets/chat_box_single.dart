@@ -28,8 +28,7 @@ class ChatBoxSingle extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.clip,
-                style:
-                    TextStyle(fontSize: messageFontSize, color: Colors.white),
+                style: TextStyle(fontSize: messageFontSize, color: contrast),
               ),
             ),
             Positioned(
@@ -38,7 +37,7 @@ class ChatBoxSingle extends StatelessWidget {
                 child: Text(
                   message.datetime,
                   style: TextStyle(
-                      fontSize: messageDateTimeFontSize, color: Colors.white),
+                      fontSize: messageDateTimeFontSize, color: contrast),
                 ))
           ],
         )
@@ -61,8 +60,7 @@ class ChatBoxSingle extends StatelessWidget {
                 message.text,
                 textDirection: TextDirection.rtl,
                 overflow: TextOverflow.clip,
-                style:
-                    TextStyle(fontSize: messageFontSize, color: Colors.white),
+                style: TextStyle(fontSize: messageFontSize, color: contrast),
               ),
             ),
             Positioned(
@@ -71,7 +69,7 @@ class ChatBoxSingle extends StatelessWidget {
                 child: Text(
                   message.datetime,
                   style: TextStyle(
-                      fontSize: messageDateTimeFontSize, color: Colors.white),
+                      fontSize: messageDateTimeFontSize, color: contrast),
                 ))
           ],
         )

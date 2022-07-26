@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+MaterialColor primaryColor = Colors.indigo;
 Color secondaryColor = Colors.tealAccent;
+Color contrast = Colors.white;
 Color messageSendedColor = Colors.indigo;
 Color messageReceivedColor = Colors.orange.shade400;
+double containersCorner = 20.0;
 double messageBoxPadding = 20.0;
 double messageFontSize = 15.0;
 double messageNameFontSize = 13.0;

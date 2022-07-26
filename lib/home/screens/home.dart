@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:primesh/chat/screens/chat_list.dart';
 import 'package:primesh/chat/screens/public_room_widget.dart';
+import 'package:primesh/config/config.dart';
 import 'package:primesh/settings/screens/setting_list.dart';
 
 class Home extends StatefulWidget {
@@ -12,8 +13,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
   static const List<Widget> _widgetOptions = <Widget>[
     PublicRoom(),
     ChatList(),
@@ -34,20 +37,22 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: primaryColor,
         centerTitle: true,
         title: const Text('Primesh'),
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(20.0),
-                bottomLeft: Radius.circular(20.0))),
+        elevation: 0,
+        toolbarHeight: 80,
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: Container(
+        color: primaryColor,
+        child: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.indigo,
-        fixedColor: Colors.white,
+        backgroundColor: primaryColor,
+        fixedColor: contrast,
         unselectedItemColor: Colors.white30,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -60,7 +65,7 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_suggest_outlined),
-            label: 'Special Functionalities',
+            label: 'Plugins',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
