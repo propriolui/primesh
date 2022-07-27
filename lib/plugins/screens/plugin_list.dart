@@ -1,21 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:primesh/config/config.dart';
-import 'package:primesh/settings/screens/setting_channels.dart';
-import 'package:primesh/settings/screens/setting_interface.dart';
-import 'package:primesh/settings/screens/setting_position.dart';
-import 'package:primesh/settings/screens/setting_power.dart';
-import 'package:primesh/settings/screens/setting_radio.dart';
-import 'package:primesh/settings/screens/setting_user.dart';
-import 'package:primesh/settings/screens/setting_wifi.dart';
 import 'package:primesh/utils/widgets/list_element.dart';
 
-class SettingList extends StatelessWidget {
-  const SettingList({Key? key}) : super(key: key);
+class PluginList extends StatelessWidget {
+  const PluginList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     void _redirect(String destination) {
-      switch (destination) {
+      /*switch (destination) {
         case "Wi-Fi":
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const SettingWiFi()));
@@ -52,7 +45,8 @@ class SettingList extends StatelessWidget {
               MaterialPageRoute(
                   builder: (context) => const SettingInterface()));
           break;
-      }
+      }*/
+      print(destination);
     }
 
     return Container(
@@ -66,65 +60,29 @@ class SettingList extends StatelessWidget {
           ListElement(
             callback: _redirect,
             icon: const Icon(
-              Icons.wifi,
+              Icons.cell_tower,
               size: 35,
             ),
-            name: "Wi-Fi",
-            description: "WiFI credential and more",
+            name: "Range Test",
+            description: "Test the range of your meshtastic node",
           ),
           ListElement(
             callback: _redirect,
             icon: const Icon(
-              Icons.location_on_outlined,
+              Icons.input,
               size: 35,
             ),
-            name: "Position",
-            description: "Position settings and flags",
+            name: "Serial",
+            description: "Send serial over the mesh",
           ),
           ListElement(
             callback: _redirect,
             icon: const Icon(
-              Icons.person,
+              Icons.storage,
               size: 35,
             ),
-            name: "User",
-            description: "Device name and details",
-          ),
-          ListElement(
-            callback: _redirect,
-            icon: const Icon(
-              Icons.battery_charging_full,
-              size: 35,
-            ),
-            name: "Power",
-            description: "Power and sleep settings",
-          ),
-          ListElement(
-            callback: _redirect,
-            icon: const Icon(
-              Icons.settings_input_antenna_outlined,
-              size: 35,
-            ),
-            name: "Radio",
-            description: "LoRa settings",
-          ),
-          ListElement(
-            callback: _redirect,
-            icon: const Icon(
-              Icons.private_connectivity_outlined,
-              size: 35,
-            ),
-            name: "Channels",
-            description: "Manage channels",
-          ),
-          ListElement(
-            callback: _redirect,
-            icon: const Icon(
-              Icons.design_services,
-              size: 35,
-            ),
-            name: "Interface",
-            description: "Language and UI settings",
+            name: "Store & Forward",
+            description: "Retrive message history",
           ),
         ],
       ),

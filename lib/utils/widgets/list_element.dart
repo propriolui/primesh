@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:primesh/config/config.dart';
 
-class SettingListElement extends StatelessWidget {
-  const SettingListElement(
+class ListElement extends StatelessWidget {
+  const ListElement(
       {Key? key,
       required this.callback,
       required this.icon,
@@ -24,7 +24,7 @@ class SettingListElement extends StatelessWidget {
                 Border(bottom: BorderSide(width: 1, color: Colors.black45))),
         child: TextButton(
           onPressed: () {
-            callback();
+            callback(name);
           },
           style: ButtonStyle(overlayColor:
               MaterialStateProperty.resolveWith<Color?>(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:primesh/chat/screens/chat_list.dart';
 import 'package:primesh/chat/screens/public_room_widget.dart';
 import 'package:primesh/config/config.dart';
+import 'package:primesh/plugins/screens/plugin_list.dart';
 import 'package:primesh/settings/screens/setting_list.dart';
 
 class Home extends StatefulWidget {
@@ -20,10 +21,7 @@ class _HomeState extends State<Home> {
   static const List<Widget> _widgetOptions = <Widget>[
     PublicRoom(),
     ChatList(),
-    Text(
-      'Index 2: Special Functionalities',
-      style: optionStyle,
-    ),
+    PluginList(),
     SettingList(),
   ];
 
@@ -60,15 +58,15 @@ class _HomeState extends State<Home> {
             label: 'Public Room',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.lock_outline_rounded),
+            icon: Icon(Icons.lock),
             label: 'Private Rooms',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_suggest_outlined),
+            icon: Icon(Icons.extension),
             label: 'Plugins',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
+            icon: Icon(Icons.settings),
             label: 'Settings',
           ),
         ],
