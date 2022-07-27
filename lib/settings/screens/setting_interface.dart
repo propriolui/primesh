@@ -17,7 +17,7 @@ class _SettingInterfaceState extends State<SettingInterface> {
         elevation: 0,
         toolbarHeight: 80,
       ),
-      body: Text("Interface"),
+      body: const Text("Interface"),
     );
   }
 }

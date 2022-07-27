@@ -17,7 +17,7 @@ class _SettingUserState extends State<SettingUser> {
         elevation: 0,
         toolbarHeight: 80,
       ),
-      body: Text("prova"),
+      body: const Text("prova"),
     );
   }
 }

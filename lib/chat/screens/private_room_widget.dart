@@ -33,6 +33,8 @@ class _PrivateRoomState extends State<PrivateRoom> {
     messages.then((data) => {message = data});
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: primaryColor,
+        foregroundColor: contrast,
         centerTitle: true,
         title: const Text("saro"),
         elevation: 0,
@@ -41,6 +43,7 @@ class _PrivateRoomState extends State<PrivateRoom> {
       body: Container(
         color: Colors.indigo,
         child: Container(
+            margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
             decoration: BoxDecoration(
                 color: contrast,
                 borderRadius: BorderRadius.only(

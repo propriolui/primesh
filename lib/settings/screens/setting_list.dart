@@ -56,6 +56,7 @@ class SettingList extends StatelessWidget {
     }
 
     return Container(
+      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
       decoration: BoxDecoration(
           color: contrast,
           borderRadius: BorderRadius.only(

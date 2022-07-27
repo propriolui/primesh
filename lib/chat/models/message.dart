@@ -6,7 +6,7 @@ class Message {
   String text;
   int counter;
   String dateTime;
-  chat_message type;
+  ChatMessage type;
   bool received;
 
   Message(

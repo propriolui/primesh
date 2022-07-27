@@ -16,12 +16,9 @@ class ListElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 80,
         width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-            border:
-                Border(bottom: BorderSide(width: 1, color: Colors.black45))),
         child: TextButton(
           onPressed: () {
             callback(name);

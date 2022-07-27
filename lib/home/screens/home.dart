@@ -15,9 +15,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
   static const List<Widget> _widgetOptions = <Widget>[
     PublicRoom(),
     ChatList(),
@@ -36,6 +33,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
+        foregroundColor: contrast,
         centerTitle: true,
         title: const Text('Primesh'),
         elevation: 0,

@@ -34,12 +34,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Primesh',
       theme: ThemeData(
-        primarySwatch: primaryColor,
-        androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
-        applyElevationOverlayColor: true,
-        primaryColorDark: Colors.black54,
-        dividerColor: Colors.white70,
-      ),
+          primarySwatch: primaryColor,
+          applyElevationOverlayColor: true,
+          primaryColorDark: Colors.black54,
+          dividerColor: Colors.white70,
+          useMaterial3: true),
       home: const Home(),
     );
   }

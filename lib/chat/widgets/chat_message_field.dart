@@ -64,6 +64,8 @@ class ChatMessageField extends StatelessWidget {
           margin: const EdgeInsets.fromLTRB(0, 0, 15, 0),
           child: ElevatedButton(
               style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(primaryColor),
+                  foregroundColor: MaterialStateProperty.all(contrast),
                   shape: MaterialStateProperty.all(
                       const CircleBorder(side: BorderSide.none)),
                   padding: MaterialStateProperty.all(

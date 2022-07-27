@@ -29,6 +29,7 @@ class _PublicRoomState extends State<PublicRoom> {
   Widget build(BuildContext context) {
     messages.then((data) => {message = data});
     return Container(
+      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
       decoration: BoxDecoration(
           color: contrast,
           borderRadius: BorderRadius.only(

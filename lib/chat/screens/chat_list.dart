@@ -24,6 +24,7 @@ class _ChatListState extends State<ChatList> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
       decoration: BoxDecoration(
           color: contrast,
           borderRadius: BorderRadius.only(
