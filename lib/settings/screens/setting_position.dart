@@ -17,7 +17,7 @@ class _SettingPositionState extends State<SettingPosition> {
         elevation: 0,
         toolbarHeight: 80,
       ),
-      body: Text("Position"),
+      body: const Text("Position"),
     );
   }
 }

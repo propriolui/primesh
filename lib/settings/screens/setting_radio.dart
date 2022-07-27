@@ -17,7 +17,7 @@ class _SettingRadioState extends State<SettingRadio> {
         elevation: 0,
         toolbarHeight: 80,
       ),
-      body: Text("prova"),
+      body: const Text("prova"),
     );
   }
 }

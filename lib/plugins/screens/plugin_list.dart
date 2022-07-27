@@ -46,7 +46,6 @@ class PluginList extends StatelessWidget {
                   builder: (context) => const SettingInterface()));
           break;
       }*/
-      print(destination);
     }
 
     return Container(

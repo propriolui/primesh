@@ -17,7 +17,7 @@ class _SettingChannelsState extends State<SettingChannels> {
         elevation: 0,
         toolbarHeight: 80,
       ),
-      body: Text("Channel"),
+      body: const Text("Channel"),
     );
   }
 }
