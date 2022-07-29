@@ -7,7 +7,9 @@ import 'package:primesh/settings/screens/setting_power.dart';
 import 'package:primesh/settings/screens/setting_radio.dart';
 import 'package:primesh/settings/screens/setting_user.dart';
 import 'package:primesh/settings/screens/setting_wifi.dart';
+import 'package:primesh/utils/widgets/checkbox_element.dart';
 import 'package:primesh/utils/widgets/list_element.dart';
+import 'package:primesh/utils/widgets/pages_bottom_menu_container.dart';
 
 class SettingList extends StatelessWidget {
   const SettingList({Key? key}) : super(key: key);
@@ -55,13 +57,7 @@ class SettingList extends StatelessWidget {
       }
     }
 
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-      decoration: BoxDecoration(
-          color: contrast,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(containersCorner),
-              topRight: Radius.circular(containersCorner))),
+    return PagesBottomMenuContainer(
       child: ListView(
         children: [
           ListElement(

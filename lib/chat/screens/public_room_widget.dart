@@ -4,6 +4,7 @@ import 'package:primesh/chat/widgets/chat_message_field.dart';
 import 'package:primesh/config/config.dart';
 import 'package:primesh/db/db_helper.dart';
 import 'package:primesh/db/models/message.dart';
+import 'package:primesh/utils/widgets/pages_bottom_menu_container.dart';
 
 class PublicRoom extends StatefulWidget {
   const PublicRoom({Key? key}) : super(key: key);
@@ -28,13 +29,7 @@ class _PublicRoomState extends State<PublicRoom> {
   @override
   Widget build(BuildContext context) {
     messages.then((data) => {message = data});
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-      decoration: BoxDecoration(
-          color: contrast,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(containersCorner),
-              topRight: Radius.circular(containersCorner))),
+    return PagesBottomMenuContainer(
       child: Column(
         children: <Widget>[
           Expanded(

@@ -3,6 +3,7 @@ import 'package:primesh/chat/models/list_element_content.dart';
 import 'package:primesh/chat/screens/private_room_widget.dart';
 import 'package:primesh/chat/widgets/chat_list_element.dart';
 import 'package:primesh/config/config.dart';
+import 'package:primesh/utils/widgets/pages_bottom_menu_container.dart';
 
 class ChatList extends StatefulWidget {
   const ChatList({Key? key}) : super(key: key);
@@ -23,13 +24,7 @@ class _ChatListState extends State<ChatList> {
       ListElementContent(name: "Fabrizio", lastMessage: "uocaca");
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-      decoration: BoxDecoration(
-          color: contrast,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(containersCorner),
-              topRight: Radius.circular(containersCorner))),
+    return PagesBottomMenuContainer(
       child: ListView(
         children: [
           ChatListElement(callback: _goToRoom),

@@ -240,6 +240,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
+  space_fixer:
+    dependency: "direct main"
+    description:
+      name: space_fixer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1"
   sqflite:
     dependency: "direct main"
     description:

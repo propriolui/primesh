@@ -13,7 +13,7 @@ class _SettingWifiState extends State<SettingWiFi> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("saro"),
+        title: const Text("Wi-Fi settings"),
         elevation: 0,
         toolbarHeight: 80,
       ),

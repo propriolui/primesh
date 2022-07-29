@@ -31,20 +31,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: primaryColor,
       appBar: AppBar(
         backgroundColor: primaryColor,
         foregroundColor: contrast,
         centerTitle: true,
         title: const Text('Primesh'),
-        elevation: 0,
-        toolbarHeight: 80,
+        elevation: 0.0,
+        toolbarHeight: 70,
       ),
-      body: Container(
-        color: primaryColor,
-        child: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: primaryColor,
